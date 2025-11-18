@@ -29,10 +29,11 @@ body, html {
 
 /* Map container */
 #map {
-  height: 100vh;
+  height: 100dvh; /* dynamic viewport height, mieux supporté sur mobile */
   width: 100%;
   filter: brightness(0.85) contrast(1.2);
 }
+
 
 /* Leaflet controls styling */
 .leaflet-control-attribution {
@@ -127,11 +128,12 @@ body, html {
   .legend {
     width: 140px;
     padding: 10px;
-    bottom: 10px;
+    bottom: 20px; /* un peu plus pour être sûr */
     right: 10px;
     font-size: 0.8rem;
   }
 }
+
 
 
 .floater-credit {
