@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Secteurs Expedition CPRE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+</head>
+<body>
+
+<!-- PASSWORD OVERLAY -->
+<div id="password-overlay">
+  <div id="password-box">
+    <h2>Accès sécurisé</h2>
+    <p>
+      Cette application contient des données réelles réservées au personnel autorisé.
+      Pour accéder aux données réelles, entrez votre mot de passe ci-dessous.
+    </p>
+    <p style="font-size:0.85rem; color:#ff5a8a;">
+      Si le mot de passe est incorrect ou absent, vous serez redirigé vers une version démo avec des données fictives.
+    </p>
+
+    <input id="password-input" type="password" placeholder="Mot de passe">
+    <button id="password-btn">Valider</button>
+
+    <div id="password-error" style="margin-top:10px; color:#ff5a8a; font-weight:500;"></div>
+  </div>
+</div>
+
+
+  <h1 class="map-title">Map interactive des secteurs de livraison CPRE</h1>
+  <div id="map"></div>
+
+  <div class="floater-credit">
+    Made by Pharmacien :
+    <a href="https://www.linkedin.com/in/othmane-hattach-2276a0297/" target="_blank" rel="noopener noreferrer">
+      Othmane Hattach
+    </a>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Password Gate -->
+  <script src="gate.js"></script>
+
+</body>
+</html>

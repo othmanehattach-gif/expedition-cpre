@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  background-color: #000;
+  color: white;
+}
+
+/* Title styling */
+.map-title {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(20,20,20,0.8);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid #ff5a8a;
+  box-shadow: 0 0 10px rgba(255, 90, 138, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+/* Map container */
+#map {
+  height: 100vh;
+  width: 100%;
+  filter: brightness(0.85) contrast(1.2);
+}
+
+/* Leaflet controls styling */
+.leaflet-control-attribution {
+  display: none;
+}
+.leaflet-control-zoom a {
+  color: #fff !important;
+  background: rgba(30,30,30,0.6);
+  border: 1px solid #555;
+}
+.leaflet-control-zoom a:hover {
+  background: rgba(255,90,138,0.6);
+}
+
+/* Marker glow */
+.leaflet-interactive {
+  filter: drop-shadow(0 0 6px rgba(255, 90, 138, 0.8));
+}
+
+/* Popup styling */
+.leaflet-popup-content-wrapper {
+  background: rgba(20,20,20,0.9);
+  color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ff5a8a;
+  box-shadow: 0 0 10px rgba(255, 90, 138, 0.5);
+}
+.leaflet-popup-tip {
+  background: rgba(20,20,20,0.9);
+}
+
+/* Subtle pulse animation for markers */
+@keyframes pulse {
+  0% { r: 6; opacity: 1; }
+  50% { r: 10; opacity: 0.5; }
+  100% { r: 6; opacity: 1; }
+}
+
+/* Legend styling */
+.legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(20,20,20,0.85);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ff5a8a;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  box-shadow: 0 0 10px rgba(255,90,138,0.3);
+  cursor: pointer; /* indicate clickable */
+  transition: all 0.3s ease;
+  width: 180px; /* optional */
+}
+
+/* Title */
+.legend h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #ff5a8a;
+  user-select: none;
+}
+
+/* Items */
+.legend-items {
+  margin-top: 8px;
+  display: block;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  margin-right: 8px;
+  border: 1px solid #fff;
+}
+
+/* Collapsed state */
+.legend.collapsed .legend-items {
+  display: none;
+}
+
+
+.floater-credit {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: rgba(20,20,20,0.85);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  border: 1px solid #ff5a8a;
+  box-shadow: 0 0 8px rgba(255,90,138,0.4);
+}
+.floater-credit a {
+  color: #ff5a8a;
+  text-decoration: none;
+}
+.floater-credit a:hover {
+  text-decoration: underline;
+}
+
+/* PASSWORD OVERLAY */
+#password-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+#password-box {
+  background: #222;
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  color: white;
+}
+
+#password-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+
+#password-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background: #00baff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#password-error {
+  margin-top: 12px;
+  color: #ff6f6f;
+  min-height: 20px;
+}
